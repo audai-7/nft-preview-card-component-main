@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --ff: "Outfit", sans-serif;
+  --pc-Soft-blue: hsl(215, 51%, 70%);
+  --pc-Cyan: hsl(178, 100%, 50%);
+  --nc-Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --nc-Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --nc-Very-dark-blue-line: hsl(215, 32%, 27%);
+  --fs-b: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--nc-Very-dark-blue-main-BG);
+  font-family: var(--ff);
+  font-size: var(--fs-b);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 350px;
+  margin: 3rem auto;
+  background-color: var(--nc-Very-dark-blue-card-BG);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper {
+  margin: 1.5rem;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.hidden-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: none;
+}
+
+.hidden-img img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-img:hover .hidden-img {
+  display: block;
+}
+
+.hero-text h1 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.hero-text h1:hover {
+  color: var(--pc-Cyan);
+}
+.hero-text p {
+  color: var(--pc-Soft-blue);
+  padding-bottom: 1.5rem;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rate img {
+  margin-top: -1.3rem;
+}
+
+.rate p {
+  font-size: 16px;
+  color: var(--pc-Cyan);
+  font-weight: 600;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time img {
+  margin-top: -1.3rem;
+}
+
+.time p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.line {
+  border-top: 1px solid var(--nc-Very-dark-blue-line);
+  padding-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer img {
+  width: 10%;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.footer p {
+  font-size: 16px;
+  padding-top: 0.4rem;
+  color: var(--pc-Soft-blue);
+}
+
+.footer p span {
+  color: white;
+  cursor: pointer;
+}
+
+.footer p span:hover {
+  color: var(--pc-Cyan);
+}
